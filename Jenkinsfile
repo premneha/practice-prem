@@ -3,6 +3,9 @@ pipeline {
 
     stages {
         stage('Build Master') {
+            options {
+                timestamps()
+            }
             when {
                 branch 'main'
             }
@@ -13,6 +16,9 @@ pipeline {
         }
         
         stage('Build dev') {
+            options {
+                timestamps()
+            }
             when {
                 branch 'dev'
             }
