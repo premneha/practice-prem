@@ -6,7 +6,7 @@ pipeline {
             when{
 #                    buildingTag()
 #		     tag "4.0"
-		     changelog '_*some_test.*'
+		     changelog '_*some_text.*'
                 }
             steps {
                 echo 'Hello World Tag'
