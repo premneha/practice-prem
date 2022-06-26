@@ -1,31 +1,13 @@
 pipeline {
-    agent {
-        label 'slave1'
-    }
+    agent any
 
     stages {
-        stage('Build Master') {
-            options {
-                timestamps()
-            }
-            when {
-                branch 'main'
-            }
+        stage('Build') {
+            when{
+                    buildingTag()
+                }
             steps {
-                echo 'Hello World main'
-            }
-            
-        }
-        
-        stage('Build dev') {
-            options {
-                timestamps()
-            }
-            when {
-                branch 'dev'
-            }
-            steps{
-                echo 'Hello Wordls dev'
+                echo 'Hello World Tag'
             }
         }
     }
