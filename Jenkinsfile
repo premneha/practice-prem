@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             when{
-		     changelog '_*some_text.*'
+		     changeRequest()
                 }
             steps {
                 echo 'Hello World Tag'
