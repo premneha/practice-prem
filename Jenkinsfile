@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             when{
-		     changeRequest()
+		     changeset glob: "*.js"
                 }
             steps {
                 echo 'Hello World Tag'
